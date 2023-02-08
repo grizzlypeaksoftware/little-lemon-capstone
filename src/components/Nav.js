@@ -2,7 +2,7 @@ import React from "react";
 
 const Nav = () =>{
     return (
-        <nav>
+        <nav className="mainNav col-md-8">
             <ul>
                 <li>Home</li>
                 <li>About</li>

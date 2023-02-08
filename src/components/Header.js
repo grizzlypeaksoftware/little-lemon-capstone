@@ -4,9 +4,14 @@ import Nav from "./Nav";
 const Header = () =>{
     return (
         <header>
-            <img src="/images/logo.svg"/>
-            <Nav></Nav>
-
+            <div className="container">
+                <div className="flex">
+                    <div className="col-md-4">
+                        <img className="logo" src="/images/logo.svg"/>
+                    </div>
+                    <Nav />
+                </div>
+            </div>
         </header>
     )
 };

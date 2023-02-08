@@ -1,38 +1,279 @@
-.App {
-  text-align: center;
+body{
+  font-family: "Karla";
+  color: #000;
+  line-height: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1,h2,h3{
+  font-family: 'Markazi Text';
+}
+
+p{
+  font-size: 16px;
+  line-height: 1.5em;
   }
+
+h1{
+  font-size: 64px;
+  font-weight: medium;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+h2{
+  font-size:40px;
+  font-weight: normal;
+}
+
+h3{
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Karla';
+}
+
+button{
+  font-size: 16px;
+  border-radius: 16px;
+  padding: 8px 20px;
+  font-family: 'Karla';
+  border:none;
+}
+
+.card{
+  border-radius: 16px;
+  background-color: #edefee;
+}
+
+.card-body{
+  padding: 10px;
+}
+
+.card-image img{
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.title, .card-title{
+ font-size: 16px;
+ font-weight: bold; 
+}
+
+.card-footer{
+  padding: 10px;
+}
+
+.lead{
+  font-size: 18px;
+  font-weight: medium;
+}
+
+img{
+  max-width: 100%;
+  height: auto; /* default */
+}
+
+/* Add code for container class below */
+.layout {
+  display:grid;
+  max-width:100%;
+  min-height: 50vh;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+
+.container{
+  max-width: 1140px;
+  margin:auto;
+}
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.col-md-12{
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col-md-8{
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-md-6{
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-md-4{
+  flex: 0 0 33%;
+  max-width: 33%;
+}
+
+.col-md-3{
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-md-2{
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+header{
+  grid-area: header;
+}
+
+main{
+  grid-area: main;
+}
+
+footer{
+  grid-area: footer;
+}
+
+.flex{
+  display:flex;
+  flex-direction: row;
+}
+
+.flex-align-space{
+  justify-content: space-between;
+}
+
+.margin-auto{
+  margin:auto;
+}
+
+.center{
+  justify-content: center;
+}
+
+.primary{
+  color: #f4ce14;
+}
+
+.bg-primary{
+  background-color: #f4ce14;
+}
+
+button.primary{
+  background-color: #f4ce14;
+  color: #000
+}
+
+.white{
+  color: #fff;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.mt-1{
+  margin-top: 1em;
+}
+
+.mt-2{
+  margin-top: 2em;
+}
+
+.m-1{
+  margin: 1em;
+}
+
+.m-2{
+  margin: 2em;
+}
+
+.pr-1{
+  padding-right: 1em;
+}
+
+.about{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+nav li{
+  list-style-type: none;
+}
+
+nav.mainNav li{
+  display: inline;
+  padding: 0 33px;
+}
+
+.highlights img{
+  width:375px;
+  height: 325px;
+  margin: 25px auto;
+}
+
+.highlights{
+  background-color: #495E57;
+}
+
+.specials .card-image img{  
+  height: 185px;
+}
+
+.double-image {
+  max-height: 13rem;
+  position: relative;
+  top: 4rem;
+  left: 2rem;
+}
+
+.double-image > img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.about-2 {
+  position: absolute;
+  top: -3.5rem;
+  left: 5rem;
+}
+
+.footer{
+  background-color: #495E57;
+  padding: 30px 0;
+  color: #fff;
+}
+
+.footer-nav-item{
+  flex: 1;
+}
+
+.footer-logo{
+  width: 100px;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+  .layout{
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";
+  } 
 }
