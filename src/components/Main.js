@@ -1,18 +1,17 @@
 import React from "react";
-import Highlights from "./Highlights";
-import Specials from "./Specials";
-import Testimonials from "./Testimonials";
-import About from "./About";
+import {Routes, Route} from "react-router-dom";
+import HomePage from "./HomePage";
+import BookingPage from "./BookingPage";
+import MissingPage from "./MissingPage";
 
 const Main = () =>{
     return (
         <main>
-            <div>
-                <Highlights />
-                <Specials />
-                <Testimonials />
-                <About/>
-            </div>
+            <Routes>
+                <Route path="/" element={<HomePage />}></Route>
+                <Route path="/booking" element={<BookingPage />}></Route>
+                <Route path="/404" element={<MissingPage />}></Route>
+            </Routes>
         </main>
     )
 };

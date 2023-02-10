@@ -1,52 +1,39 @@
 import React from "react";
+import Testimonial from "./Testimonial";
 
 const Testimonials = () =>{
+
+    var testimonials = [
+        {
+            quote: "Little Lemon has quickly become one of my favorite Mediterranean restaurants. The Greek Salad is always fresh and flavorful, and the Bruchetta is a must-try!",
+            customer: "Sarah H."
+        },{
+            quote: "If you're looking for delicious Mediterranean cuisine, Little Lemon is the place to be. The portions are generous and the lemon cake is the perfect finish to any meal.",
+            customer: "John D."
+        },
+        {
+            quote: "I've tried a lot of Mediterranean restaurants, but Little Lemon stands out for its attention to detail and use of quality ingredients. Highly recommend!",
+            customer: "Maria G."
+        },{
+            quote: "The atmosphere at Little Lemon is warm and inviting, making it the perfect spot for a romantic dinner or a night out with friends. And the food... oh, the food is simply divine.",
+            customer: "David M."
+        }
+    ];
+
+    var testimonial_cards = testimonials.map((testimonial)=>{
+        return(
+            <Testimonial testimonial={testimonial} />
+        )
+    });
+
     return (
-        <div className="container mt-2">
-            <h2>Testimonials</h2>
-            <div className="row">
-                <div className="card col-md-2 m-1">
-                    <div className="card-body">                       
-                        <div className="mt-1">
-                            <p className="lead">
-                                "Little Lemon has quickly become one of my favorite Mediterranean restaurants. The Greek Salad is always fresh and flavorful, and the Bruchetta is a must-try!"
-                            </p>
-                        </div>
-                        <div className="mt-1">
-                            <i className="fa fa-solid fa-star primary"></i>
-                            <i className="fa fa-solid fa-star primary"></i>
-                            <i className="fa fa-solid fa-star primary"></i>
-                            <i className="fa fa-solid fa-star primary"></i>
-                            <i className="fa fa-solid fa-star primary"></i>
-                            <span className="bold"> - Josh S.</span>
-                        </div>
-                    </div>
+        <div className="container">
+            <div className="testimonials">
+                <h2>Testimonials</h2>
+                <div className="row testimonials-parent">
+                    {testimonial_cards}
                 </div>
-                <div className="card col-md-2 m-1">
-                    <div className="card-body">
-                        <i className="fa-light fa-hat-chef"></i>
-                        <p className="lead">
-                            "Little Lemon has quickly become one of my favorite Mediterranean restaurants. The Greek Salad is always fresh and flavorful, and the Bruchetta is a must-try!" - Sarah H.
-                        </p>
-                    </div>
-                </div>
-                <div className="card col-md-2 m-1">
-                    <div className="card-body">
-                        <i className="fa-light fa-hat-chef"></i>
-                        <p className="lead">
-                            "Little Lemon has quickly become one of my favorite Mediterranean restaurants. The Greek Salad is always fresh and flavorful, and the Bruchetta is a must-try!" - Sarah H.
-                        </p>
-                    </div>
-                </div>
-                <div className="card col-md-2 m-1">
-                    <div className="card-body">
-                        <i className="fa-light fa-hat-chef"></i>
-                        <p className="lead">
-                            "Little Lemon has quickly become one of my favorite Mediterranean restaurants. The Greek Salad is always fresh and flavorful, and the Bruchetta is a must-try!" - Sarah H.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            </div>          
         </div>
     )
 };

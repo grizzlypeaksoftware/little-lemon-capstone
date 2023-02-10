@@ -1,76 +1,41 @@
 import React from "react";
+import Special from "./Special";
 
 const Specials = () =>{
+
+    var specials = [
+        {
+            name: "Greek Salad",
+            price: "$14.99",
+            image: "greek salad.jpg",
+            description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
+        },
+        {
+            name: "Bruchetta",
+            price: "$9.99",
+            image: "bruchetta.jpg",
+            description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
+        },
+        {
+            name: "Lemon Dessert",
+            price: "$12.99",
+            image: "lemon dessert.jpg",
+            description: "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
+
+        }
+    ];
+
+    const specialsCards = specials.map((special)=>{
+        return(
+        <Special special={special} />
+        )
+    })
+
     return (
         <div className="container mt-2 specials">
             <h2>Specials</h2>
-            <div className="flex flex-align-space mt-2">
-                <div className="card col-md-3">
-                    <div className="card-image">
-                        <img src="/images/greek salad.jpg" />
-                    </div>
-                    <div className="card-body">
-                        <div className="flex mt-1">
-                            <div className="card-title">
-                                Greek Salad
-                            </div>
-                            <div className="card-price">
-                                $12.99
-                            </div>
-                        </div>
-                        <p className="lead mt-1">
-                            The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. 
-                        </p>
-                    </div>
-                    <div className="card-footer flex mt-1">
-                        <a>Order Delivery</a>
-                        <img src="/images/Dish icon.svg"/>
-                    </div>
-                </div>
-                <div className="card col-md-3">
-                    <div className="card-image">
-                        <img src="/images/bruchetta.svg" />
-                    </div>
-                    <div className="card-body">
-                        <div className="flex mt-1">
-                            <div className="card-title">
-                                Bruchetta
-                            </div>
-                            <div className="card-price">
-                                $5.99
-                            </div>
-                        </div>
-                        <p className="lead mt-1">
-                        Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.
-                        </p>
-                    </div>
-                    <div className="card-footer flex mt-1">
-                        <a>Order Delivery</a>
-                        <img src="/images/Dish icon.svg"/>
-                    </div>
-                </div>
-                <div className="card col-md-3">
-                    <div className="card-image">
-                        <img src="/images/lemon dessert.jpg" />
-                    </div>
-                    <div className="card-body">
-                        <div className="flex mt-1">
-                            <div className="card-title">
-                                Lemon Dessert
-                            </div>
-                            <div className="card-price">
-                                $5.00
-                            </div>
-                        </div>
-                        <p className="lead mt-1">
-                        This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
-                        </p>
-                    </div>
-                    <div className="card-footer flex mt-1">
-                        <a>Order Delivery</a>
-                        <img src="/images/Dish icon.svg"/>
-                    </div>
-                </div>
+            <div className="mt-2 specials-parent">
+                {specialsCards}
             </div>
         </div>
     )
