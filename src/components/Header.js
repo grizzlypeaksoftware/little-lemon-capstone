@@ -10,7 +10,7 @@ const Header = () =>{
             <div className="container">
                 <div className="flex">
                     <div className="col-md-4">
-                        <img className="logo" src={logoPath}/>
+                        <img id='site-logo' className="logo" src={logoPath}/>
                     </div>
                     <div className="col-md-8 main-nav">
                         <Nav />

@@ -4,7 +4,7 @@ const Special = (props) =>{
     var special = props.special;
     var imageUrl = "/images/" + special.image;
     return (
-        <div key={special.name} className="card specials-item">
+        <div key={special.name} className="card">
             <div className="card-image">
                 <img src={imageUrl}/>
             </div>

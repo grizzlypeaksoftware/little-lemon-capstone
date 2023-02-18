@@ -1,13 +1,44 @@
 import React from "react";
-import Highlights from "./Highlights";
-import Specials from "./Specials";
-import Testimonials from "./Testimonials";
-import About from "./About";
+import BookingForm from "./BookingForm";
+import { useReducer } from "react";
+import {fetchAPI, submitAPI} from "../api/BookingAPI";
+import { useNavigate } from 'react-router-dom';
 
-const BookingPage = () =>{
+
+const BookingPage = () =>{    
+
+    // update times
+    function updateTimes(date) {
+        return fetchAPI(date);
+    }
+
+    function submitForm(formData){
+        return submitAPI(formData);
+    }
+
+    // initialize times
+    var originalTimes = fetchAPI(new Date());
+
+    const [availableTimes, updateAvailableTimes] = useReducer(updateTimes, originalTimes);
+
     return (
-        <div>
-            <h1>Booking Page</h1>
+        <div className="booking-container">
+            <div className="booking-page-header">
+                <div className="container">
+                    <div className="booking-parent">
+                        <div className="booking">
+                            <h1 className="primary">Reserve a Table</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="booking-parent">
+                    <div className="booking">
+                        <BookingForm availableTimes={availableTimes} updateAvailableTimes={updateAvailableTimes} submitForm={submitForm} />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 };

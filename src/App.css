@@ -43,6 +43,10 @@ button{
   border:none;
 }
 
+a.button{
+  background-color: ;
+}
+
 .card{
   border-radius: 16px;
   background-color: #edefee;
@@ -165,7 +169,17 @@ footer{
 
 button.primary{
   background-color: #f4ce14;
-  color: #000
+  color: #000;  
+}
+
+button.secondary{
+  background-color: #EE9972;
+  color: #000;
+}
+
+button:active.primary{
+  background-color: #495E57;
+  color: #fff;
 }
 
 .white{
@@ -240,15 +254,40 @@ nav li{
   background-color: #495E57;
 }
 
-.specials .card-image img{
-  height: 185px;
-}
-
-.specials-parent, .testimonials-parent{
+.specials-parent, .testimonials-parent, .booking-parent{
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   gap: 2em;
+}
+
+.specials .card-image img{
+  height: 185px;
+}
+
+.booking-page-header{
+  background-color: #495E57;
+}
+
+.booking{
+  margin-top : 3em;
+  margin-bottom : 3em;
+  text-align: center;
+}
+
+.reservation-form{
+  text-align: center;
+}
+
+.reservation-form form{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.reservation-form div{
+  margin: 5px 0;
 }
 
 .testimonials{
@@ -316,6 +355,12 @@ nav li{
 .footer-logo{
   width: 100px;
 }
+
+.confirmation-content{
+  text-align: center;
+}
+
+
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
