@@ -1,3 +1,4 @@
+/* baseline css */
 body{
   font-family: "Karla";
   color: #000;
@@ -43,46 +44,12 @@ button{
   border:none;
 }
 
-a.button{
-  background-color: ;
-}
-
-.card{
-  border-radius: 16px;
-  background-color: #edefee;
-}
-
-.card-body{
-  padding: 10px;
-}
-
-.card-image img{
-  width: 100%;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-.title, .card-title{
- font-size: 16px;
- font-weight: bold; 
-}
-
-.card-footer{
-  padding: 10px;
-  display: flex;
-}
-
-.lead{
-  font-size: 18px;
-  font-weight: medium;
-}
-
 img{
   max-width: 100%;
   height: auto; /* default */
 }
 
-/* Add code for container class below */
+/* Layout */
 .layout {
   display:grid;
   max-width:100%;
@@ -92,145 +59,100 @@ img{
   grid-template-areas: "header" "main" "footer";
 }
 
-
 .container{
   max-width: 1140px;
   margin:auto;
 }
 
-.row{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.grid-parent{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 2em;
 }
 
-.col-md-12{
-  flex: 0 0 100%;
-  max-width: 100%;
+.grid-row-parent{
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  gap: 1em;
 }
 
-.col-md-8{
-  flex: 0 0 75%;
-  max-width: 75%;
-}
-
-.col-md-6{
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.col-md-4{
-  flex: 0 0 33%;
-  max-width: 33%;
-}
-
-.col-md-3{
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.col-md-2{
-  flex: 0 0 20%;
-  max-width: 20%;
-}
-
-header{
-  grid-area: header;
-}
-
-main{
-  grid-area: main;
-}
-
-footer{
-  grid-area: footer;
-}
-
+/* deprecated */
+/* dependencies about and footer */
 .flex{
   display:flex;
   flex-direction: row;
 }
 
-.margin-auto{
-  margin:auto;
+/* Style guide styles */
+.lead{
+  font-size: 18px;
+  font-weight: medium;
 }
 
-.center{
-  justify-content: center;
+/* semantic tags */
+
+/* header */
+header{
+  grid-area: header;
 }
 
-.primary{
-  color: #f4ce14;
+.header-parent{
+  display:flex;
+  flex-direction: row;
 }
 
-.bg-primary{
-  background-color: #f4ce14;
+.header-logo{
+  margin: 5px 0;
+  flex: 0 0 33%;
+  max-width: 33%;
 }
 
-button.primary{
-  background-color: #f4ce14;
-  color: #000;  
-}
-
-button.secondary{
-  background-color: #EE9972;
-  color: #000;
-}
-
-button:active.primary{
-  background-color: #495E57;
-  color: #fff;
-}
-
-.white{
-  color: #fff;
-}
-
-.bold{
-  font-weight: bold;
-}
-
-.mt-1{
-  margin-top: 1em;
-}
-
-.mt-2{
-  margin-top: 2em;
-}
-
-.m-1{
-  margin: 1em;
-}
-
-.m-2{
-  margin: 2em;
-}
-
-.pr-1{
-  padding-right: 1em;
-}
-
-.about{
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
+/* nav */
 nav li{
   list-style-type: none;
 }
 
-.main-nav{
-  margin-top:12px;
+/* Header nav */
+.header-nav{
+  flex: 0 0 75%;
+  max-width: 75%;
+  margin-top:18px;
 }
 
-.main-nav li{
+.header-nav li{
   display: inline;
   padding: 0 33px;
   color: #000;
 }
 
-.main-nav a{
+.header-nav a{
   text-decoration: none;
+}
+
+/* main */
+main{
+  grid-area: main;
+}
+
+/* footer */
+footer{
+  grid-area: footer;
+}
+
+.footer{
+  background-color: #495E57;
+  padding: 30px 0;
+  color: #fff;
+}
+
+.footer-nav{
+  margin-top: 1em;
+}
+
+.footer-logo{
+  width: 100px;
 }
 
 .footer li{
@@ -240,13 +162,17 @@ nav li{
 .footer a{
   color: #fff
 }
+
 .footer a:hover{
   color: #f4ce14
 }
 
+/* sections */
+
+/* highlights section */
 .highlights img{
-  width:375px;
-  height: 325px;
+  width:100%;
+  height: auto;
   margin: 25px auto;
 }
 
@@ -254,42 +180,41 @@ nav li{
   background-color: #495E57;
 }
 
-.specials-parent, .testimonials-parent, .booking-parent{
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  gap: 2em;
+.highlights-content{
+  margin-top: 2em;
+}
+.highlights-content p{
+  margin-top: 1em;
+}
+
+.highlights-content button{
+  margin-top: 2em;
+}
+
+/* specials section */
+
+.specials{
+  margin-top: 2em;
 }
 
 .specials .card-image img{
   height: 185px;
 }
 
-.booking-page-header{
-  background-color: #495E57;
+.special{
+  margin-top: 2em;
 }
 
-.booking{
-  margin-top : 3em;
-  margin-bottom : 3em;
-  text-align: center;
+.special p{
+  margin-top: 1em;
 }
 
-.reservation-form{
-  text-align: center;
+.special-footer{
+  margin-top: auto;
+  
 }
 
-.reservation-form form{
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr;
-  align-items: center;
-}
-
-.reservation-form div{
-  margin: 5px 0;
-}
-
+/* testimonials section */
 .testimonials{
   margin-top : 3em;
   margin-bottom : 3em;
@@ -317,6 +242,22 @@ nav li{
   font-size: 40px;
 }
 
+
+
+/* about section */
+.about{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-content{
+  padding-right: 1em;
+}
+
+.about-content p{
+  margin-top: 1em;
+}
+
 .double-image {
   max-height: 13rem;
   position: relative;
@@ -342,37 +283,116 @@ nav li{
   left: 5rem;
 }
 
-.footer{
+
+
+
+/* card */
+
+.card{
+  border-radius: 16px;
+  background-color: #edefee;
+}
+
+.card-body{
+  padding: 10px;
+}
+
+.card-image img{
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.title, .card-title{
+ font-size: 16px;
+ font-weight: bold;
+}
+
+.card-footer{
+  padding: 10px;
+}
+
+
+
+.primary{
+  color: #f4ce14;
+}
+
+.bg-primary{
+  background-color: #f4ce14;
+}
+
+.bg-secondary{
   background-color: #495E57;
-  padding: 30px 0;
+}
+
+button.primary{
+  background-color: #f4ce14;
+  color: #000;  
+}
+
+button.secondary{
+  background-color: #EE9972;
+  color: #000;
+}
+
+button:active.primary{
+  background-color: #495E57;
   color: #fff;
 }
 
-.footer-nav-item{
-  flex: 1;
+.white{
+  color: #fff;
 }
 
-.footer-logo{
-  width: 100px;
+.bold{
+  font-weight: bold;
 }
+
+.booking{
+  margin-top : 3em;
+  margin-bottom : 3em;
+  text-align: center;
+}
+
+.reservation-form{
+  text-align: center;
+}
+
+.reservation-form form{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.reservation-form div{
+  margin: 5px 0;
+}
+
+
 
 .confirmation-content{
   text-align: center;
 }
 
-
-
 /* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-
+@media (max-width: 576px) {
   .layout{
-    grid-template-columns: 150px 1fr 150px;
+    display:grid;
+    max-width:100%;
+    min-height: 50vh;
+    grid-template-columns: 100%;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: "header header header"
-                         "main main main"
-                         "footer footer footer";
+    grid-template-areas: "header" "main" "footer";
   } 
-
+  
+  .grid-parent{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+    gap: 1em;
 }
 
-
+  
+}

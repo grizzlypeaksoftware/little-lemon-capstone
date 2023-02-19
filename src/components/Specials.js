@@ -27,14 +27,14 @@ const Specials = () =>{
 
     const specialsCards = specials.map((special)=>{
         return(
-        <Special special={special} />
+        <Special key={special.name} special={special} />
         )
     })
 
     return (
-        <div className="container mt-2 specials">
+        <div className="container specials">
             <h2>Specials</h2>
-            <div className="mt-2 specials-parent">
+            <div className="grid-parent">
                 {specialsCards}
             </div>
         </div>

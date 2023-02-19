@@ -26,12 +26,5 @@ test("test update times", ()=>{
   fireEvent.change(dateField, { target: { value: date } });
   const listElements = document.querySelector("#time-list");
   expect(listElements).toBeInTheDocument();
-  
 
 });
-/*
-test('submit booking form', ()=>{
-  render(<BookingForm />);
-  const button = screen.getByRole('button')
-});
-*/

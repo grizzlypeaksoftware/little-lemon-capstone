@@ -7,30 +7,28 @@ const Footer = () =>{
     return (
         <footer className="footer">
             <div className="container">
-                <div className="flex">
-                    <div className="footer-nav-item">
+                <div className="grid-parent">
+                    <div>
                         <img className="footer-logo" src="/images/footer-logo.png" about="logo image for little lemon"></img>
                     </div>
-                    <div className="footer-nav-item">
+                    <div>
                         <h3>Navigation</h3>
-                        <div className="mt-1 footer-nav">
+                        <div className="footer-nav">
                             <Nav />
                         </div>
                     </div>
-                    <div className="footer-nav-item">
+                    <div>
                         <h3>Contact</h3>
-                        <div className="mt-1 footer-nav">
+                        <div className="footer-nav">
                            <AddressFooter />
                         </div>
                     </div>
-
-                    <div className="footer-nav-item">
+                    <div>
                         <h3>Social Media Links</h3>
-                        <div className="mt-1">
+                        <div className="footer-nav">
                           <SocialNav />
                         </div>
                     </div>
-
                 </div>
             </div>
         </footer>

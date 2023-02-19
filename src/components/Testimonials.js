@@ -22,7 +22,7 @@ const Testimonials = () =>{
 
     var testimonial_cards = testimonials.map((testimonial)=>{
         return(
-            <Testimonial testimonial={testimonial} />
+            <Testimonial key={testimonial.customer} testimonial={testimonial} />
         )
     });
 
@@ -30,10 +30,10 @@ const Testimonials = () =>{
         <div className="container">
             <div className="testimonials">
                 <h2>Testimonials</h2>
-                <div className="row testimonials-parent">
+                <div className="grid-parent">
                     {testimonial_cards}
                 </div>
-            </div>          
+            </div>
         </div>
     )
 };

@@ -4,7 +4,7 @@ const Testimonial = (props) =>{
     var testimonial = props.testimonial;
 
     return (
-        <div className="card">
+        <div className="testimonial card">
             <div className="rating">
                 <i className="fa fa-solid fa-star primary star-small"></i>
                 <i className="fa fa-solid fa-star primary star-medium"></i>
@@ -13,13 +13,10 @@ const Testimonial = (props) =>{
                 <i className="fa fa-solid fa-star primary star-small"></i>
             </div>
             <div className="card-body">
-                <div className="mt-1">
-                    <p className="lead">
-                        "{testimonial.quote}"
-                    </p>
-                    <p className="bold">- {testimonial.customer}</p>
-
-                </div>
+                <p className="lead">
+                    "{testimonial.quote}"
+                </p>
+                <p className="bold">- {testimonial.customer}</p>
             </div>
         </div>
     )

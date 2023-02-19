@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "./Nav";
-
 const Header = () =>{
 
     const logoPath = "/images/logo.svg";
@@ -8,11 +7,11 @@ const Header = () =>{
     return (
         <header>
             <div className="container">
-                <div className="flex">
-                    <div className="col-md-4">
+                <div className="header-parent">
+                    <div className="header-logo">
                         <img id='site-logo' className="logo" src={logoPath}/>
                     </div>
-                    <div className="col-md-8 main-nav">
+                    <div className="header-nav">
                         <Nav />
                     </div>
                 </div>

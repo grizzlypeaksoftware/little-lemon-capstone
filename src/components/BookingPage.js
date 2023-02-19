@@ -2,8 +2,6 @@ import React from "react";
 import BookingForm from "./BookingForm";
 import { useReducer } from "react";
 import {fetchAPI, submitAPI} from "../api/BookingAPI";
-import { useNavigate } from 'react-router-dom';
-
 
 const BookingPage = () =>{    
 
@@ -23,9 +21,9 @@ const BookingPage = () =>{
 
     return (
         <div className="booking-container">
-            <div className="booking-page-header">
+            <div className="bg-secondary">
                 <div className="container">
-                    <div className="booking-parent">
+                    <div className="grid-parent">
                         <div className="booking">
                             <h1 className="primary">Reserve a Table</h1>
                         </div>
@@ -33,7 +31,7 @@ const BookingPage = () =>{
                 </div>
             </div>
             <div className="container">
-                <div className="booking-parent">
+                <div className="grid-parent">
                     <div className="booking">
                         <BookingForm availableTimes={availableTimes} updateAvailableTimes={updateAvailableTimes} submitForm={submitForm} />
                     </div>

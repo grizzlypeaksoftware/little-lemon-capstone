@@ -3,7 +3,7 @@ import React from "react";
 const ConfirmationPage = () =>{
     return (
         <div className="booking-page-container">
-            <div className="booking-page-header">
+            <div className="bg-secondary">
                 <div className="container">
                     <div className="booking-parent">
                         <div className="booking">

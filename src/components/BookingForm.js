@@ -198,7 +198,7 @@ function BookingForm(props) {
         </div>
         
         <div>
-            <button className="primary" type="submit" role="button">Book Now</button>
+            <button aria-label="Reserve a Table" className="primary" type="submit" role="button">Book Now</button>
         </div>
     </form>
 </div>
